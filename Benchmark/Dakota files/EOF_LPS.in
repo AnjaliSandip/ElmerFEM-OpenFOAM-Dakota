@@ -7,8 +7,8 @@ method
 #Define data analysis -- parameter study
   list_parameter_study
       list_of_points = 500   0.94   9800    3e7
-                       1380	0.94    9800    3e7
-                       2380	0.94    9800	3e7
+                       1380  0.94   9800    3e7
+                       2380  0.94   9800    3e7
                        3380  0.94   9800    3e7
                        4500  0.94   9800    3e7
                        2380  0.2    9800    3e7
@@ -44,7 +44,7 @@ interface
 #Define Dakota - EOF Library interface
 fork                                                                     #External simulation interface type
      analysis_driver ='EOF_LPS.sh'                                       #Calls the program that interfaces Dakota with EOF Library for this test case
-	 parameters_file='params.in'                                         #Dakota parameters file
+     parameters_file='params.in'                                         #Dakota parameters file
      results_file='/Dakota/Gui/Workspace/Project/results.out'            #Dakota results file
      work_directory directory_tag                                        #Creates and tags work directory for every iteration, the work directory stores case files along with the results for that iteration
 
