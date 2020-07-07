@@ -1,7 +1,6 @@
 This program, Elmer FEM-OpenFoam-Dakota interface, is released under license GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007.
 
-An interface program for 3 way coupling between Elmer FEM, OpenFoam and Dakota has been developed. Furthermore, it was succesfully applied to benchmarks. 
-The interface program along with examples have been provided.
+A program for 3 way coupling between open-source software Elmer FEM, OpenFoam and Dakota has been developed. Furthermore, it was succesfully applied to benchmarks. The program along with examples have been provided.
 
 Capabilities:
 The interface developed provides an open-source framework that integrates data analytics, finite element and finite volume methods. This framework enables a richer understanding of multi-physics/phase predictions in a time sensitive manner. Its key features include uncertainty quantification, surrogate modeling, parallel programming and robust post-processing capabilities.
