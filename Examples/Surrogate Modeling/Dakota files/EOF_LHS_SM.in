@@ -20,12 +20,12 @@ model
 	id_model = 'surr_model'
 	surrogate global
 	  dace_method_pointer = 'DACE'                                         
-	  polynomial linear	                                                 #linear regression fit was applied to the training data to construct the global surrogate model
+	  polynomial linear	                                           #linear regression fit was applied to the training data to construct the global surrogate model
 	    
 method
-	id_method = 'DACE'                                                    #Design and analysis of computer experiments 'DACE' was employed to generate training data        
+	id_method = 'DACE'                                                 #Design and analysis of computer experiments 'DACE' was employed to generate training data        
 	sampling
-    samples = 20                                                          #A sample size of 20 was chosen
+    samples = 20                                                           #A sample size of 20 was chosen to generate the training data
 	model_pointer = 'MHD_model'
 
 model
@@ -59,7 +59,7 @@ fork                                                                     #Extern
      asynchronous                                                        #Asynchronous local parallelism applied
      evaluation_concurrency = 4                                          #4 iterations performed simultaneously                                       
      analysis_driver ='EOFD_driver.sh'                                   #Calls the program that interfaces Dakota with EOF Library for this test case                                         
-	 parameters_file='params.in'                                         #Dakota parameters file      
+     parameters_file='params.in'                                         #Dakota parameters file      
      results_file='/Dakota/Gui/Workspace/Project/results.out'            #Dakota results file
      work_directory directory_tag                                        #Creates and tags work directory for every iteration, the work directory stores case files along with the results for that iteration
 
