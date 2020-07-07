@@ -6,7 +6,7 @@ The interface program along with examples have been provided.
 Capabilities:
 This program provides tools that enable a richer understanding of multi-physics/phase predictions utilizing the full capabilities of both finite element and finite volume methods in a time sensitive manner.
 
-If you use this program, please cite this repository -- 
+If you use this program, please cite this repository -- Sandip, A. 2020, Elmer FEM-OpenFOAM-Dakota, v1.0, Zenodo, DOI: 10.5281/zenodo.3934329
 
 
 About:
