@@ -1,0 +1,48 @@
+environment
+#Store results in tabular data file
+  tabular_data
+      tabular_data_file = 'UQ_results.dat'
+             
+method
+#Define data analysis -- UQ study
+  sampling 
+    sample_type lhs      #lhs -- latin hypercube sampling
+    samples 100
+    seed 1987
+   
+variables  
+#Define input parameter/s
+normal_uncertain 4                                                       #Input parameters vary normally
+      descriptors 'r' 's' 'f' 'I'                                        #Input parameters, 'r' melt density, 's' surface tension, 'f' AC frequency, 'I' current density                            
+      means 2500  5.1  21250   5e7
+      std_deviations 2000  4.9  18750 3e7
+      
+
+responses
+#Define output parameter/s
+  response_functions 1
+  num_field_responses 1 lengths = 2886 num_coordinates_per_field = 3     #length of lorentz force vector field = 2886, coordinates = x,y and z
+  descriptors 'lorentz_force'
+  no_gradients
+  no_hessians
+  
+  
+interface
+#Define Dakota - EOF Library interface
+fork                                                                     #External simulation interface type
+     asynchronous                                                        #Asynchronous local parallelism applied
+     evaluation_concurrency = 4                                          #4 iterations performed simultaneously
+     analysis_driver ='EOFD_driver.sh'                                   #Calls the program that interfaces Dakota with EOF Library for this test case              
+	 parameters_file='params.in'                                         #Dakota parameters file
+     results_file='/Dakota/Gui/Workspace/Project/results.out'            #Dakota results file
+     work_directory directory_tag                                        #Creates and tags work directory for every iteration, the work directory stores case files along with the results for that iteration
+
+
+     copy_files = 'templatedir/*'                                        #Files stored in 'templatedir' folder would be copied to work directory corresponding every iteration
+
+	  
+ 	named 'workdir' file_save  directory_save                            #Work directory, for every iteration, named 'workdir' saved in the Dakota workspace
+
+	
+     
+     	  
