@@ -6,7 +6,7 @@ environment
 method
 #Define data analysis -- UQ study
   sampling 
-    sample_type lhs      #lhs -- latin hypercube sampling
+    sample_type lhs                                                      #lhs -- latin hypercube sampling
     samples 100
     seed 1987
    
@@ -33,15 +33,16 @@ fork                                                                     #Extern
      asynchronous                                                        #Asynchronous local parallelism applied
      evaluation_concurrency = 4                                          #4 iterations performed simultaneously
      analysis_driver ='EOFD_driver.sh'                                   #Calls the program that interfaces Dakota with EOF Library for this test case              
-	 parameters_file='params.in'                                         #Dakota parameters file
+     parameters_file='params.in'                                         #Dakota parameters file
      results_file='/Dakota/Gui/Workspace/Project/results.out'            #Dakota results file
      work_directory directory_tag                                        #Creates and tags work directory for every iteration, the work directory stores case files along with the results for that iteration
 
 
      copy_files = 'templatedir/*'                                        #Files stored in 'templatedir' folder would be copied to work directory corresponding every iteration
+     named 'workdir' file_save  directory_save                           #Work directory, for every iteration, named 'workdir' saved in the Dakota workspace
 
 	  
- 	named 'workdir' file_save  directory_save                            #Work directory, for every iteration, named 'workdir' saved in the Dakota workspace
+ 	
 
 	
      
