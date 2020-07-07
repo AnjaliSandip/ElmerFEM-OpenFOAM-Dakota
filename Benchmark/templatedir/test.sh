@@ -43,4 +43,4 @@ ElmerGrid 2 2 meshElmer -metis 2
 
 
 #Run openFoam on 2 processes and Elmer on 2 processes
-mpirun --allow-run-as-root  -np 2 mhdInterFoam -parallel : -np 1 ElmerSolver_mpi case.sif >> log.out 2>&1
+mpirun --allow-run-as-root  -np 2 mhdInterFoam -parallel : -np 2 ElmerSolver_mpi case.sif >> log.out 2>&1
