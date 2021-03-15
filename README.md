@@ -20,7 +20,7 @@ The interface program can be extended to other versions of Elmer FEM, OpenFoam a
  - EOF Library version 1.0
  - Operating system: Linux
 
-Support enail for questions: anjali.sandip@und.edu
+Support email for questions: anjali.sandip@und.edu
 
 
 
